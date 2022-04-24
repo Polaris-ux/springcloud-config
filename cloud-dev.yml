@@ -1,0 +1,19 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    #注册进注册中心的服务名
+    name: cloud-center-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Polaris-ux/springcloud-config.git
+          #搜索目录
+          search-paths:
+            - springboot-config
+          username: Polaris-ux
+          password: mjy600811
+          skip-ssl-validation: true
+          default-label: main
